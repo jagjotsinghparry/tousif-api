@@ -1,0 +1,29 @@
+extends ../layouts/main
+
+block body
+  .container
+    .row.justify-content-md-center
+      .col-6
+        a.btn.btn-warning(href='/users') Go Back
+        form(action="/users/", method="POST")
+          form-group
+            label(for="first_name") First Name
+            input.form-control(type="text", name="first_name", id="first_name", required) 
+
+          form-group
+            label(for="last_name") Last Name
+            input.form-control(type="text", name="last_name", id="last_name", required)
+
+          form-group
+            label(for="email") E-Mail
+            input.form-control(type="email", name="email", id="email", required)
+
+          form-group
+            label(for="contact_number") Contact Number
+            input.form-control(type="text", name="contact_number", id="contact_number", required)
+
+          form-group
+            label(for="age") Age
+            input.form-control(type="numnber", name="age", id="age", required)
+
+          button.btn.btn-primary.mt-2(type="submit") Create User

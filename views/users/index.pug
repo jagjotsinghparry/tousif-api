@@ -1,0 +1,21 @@
+extends ../layouts/main
+
+block body
+    .container
+        a.btn.btn-success(href='/users/new') Create User
+        table.table.table-striped
+            thead
+                tr
+                    th ID
+                    th Name
+                    th Email
+                    th Contact Number
+                    th Age
+
+            each user in users
+                tr
+                    td= user.id
+                    td= user.first_name + " " + user.last_name
+                    td= user.email
+                    td= user.contact_number
+                    td= user.age
